@@ -16,6 +16,7 @@ import { DailogForUserNumberComponent } from './dailog-for-user-number/dailog-fo
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
+import { UseratncardComponent } from './useratncard/useratncard.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {MatIconModule} from '@angular/material/icon';
     TransactionsDashBoardComponent,
     TransactionsComponent,
     DailogForUserNumberComponent,
+    UseratncardComponent,
     
   ],
   imports: [
