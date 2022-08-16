@@ -51,11 +51,31 @@ export class BankTransactionsComponent implements OnInit {
 
   // filter 
   applyFilter(event: Event) {
+    console.log(event);
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+   filterValue = "";
+  c(event:any){
+    var filterValue = "";
+      console.log(event.value);
+      if (event.value=="All"){
+         filterValue = "";
+      }
+      else{
+
+         filterValue = event.value;
+      }
+      // console.log(filterValue);
+    //   const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    // if (this.dataSource.paginator) {
+    //   this.dataSource.paginator.firstPage();
+    // }
   }
 }

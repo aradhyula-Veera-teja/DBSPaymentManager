@@ -1,14 +1,21 @@
 
 <div>
-    <input  [(ngModel)]="userIn" type="date">
-    <p>
-        
-        {{userIn |date}}
-    </p>
-    <mat-form-field appearance="standard">
+    
+    <mat-form-field  multiple appearance="outline" >
+        <mat-label>Filter by</mat-label>
+        <mat-select  (selectionChange)="c($event)" [(ngModel)]="userIn">
+          <mat-option value="All" >All</mat-option>
+          <mat-option value="savings " >Savings Account</mat-option>
+          <mat-option value="salary " >Salary account</mat-option>
+          <mat-option value="overdraft " >Overdraft Account</mat-option>
+          <mat-option value="current" >Current</mat-option>
+        </mat-select >
+      </mat-form-field>
+      <p>{{userIn}}</p>
+    <!-- <mat-form-field appearance="standard">
         <mat-label>Filter</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input />
-    </mat-form-field>
+    </mat-form-field> -->
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 ">
         <!-- date -->
@@ -101,7 +108,7 @@
         <!-- Row shown when there is no matching data. -->
         <tr class="mat-row" *matNoDataRow>
             <td class="mat-cell" colspan="4">
-                No data matching the filter "{{ input.value }}"
+                No data matching the filter "{{ filterValue }}"
             </td>
         </tr>
     </table>

@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BankTransactionsComponent } from './bank-transactions/bank-transactions.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,8 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     MatInputModule,
     MatCardModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

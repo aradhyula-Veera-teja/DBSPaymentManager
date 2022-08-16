@@ -9,6 +9,7 @@ export class UseratncardComponent implements OnInit {
   user!:any;
   constructor(private api:ApiService) { 
     this.api.getuser("9908");
+    
     // console.log(this.api.user)
     this.user=this.api.user;
   }
