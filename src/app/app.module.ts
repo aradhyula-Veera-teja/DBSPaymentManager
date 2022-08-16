@@ -8,8 +8,8 @@ import { TransactionsDashBoardComponent } from './transactions-dash-board/transa
 import { TransactionsComponent } from './transactions/transactions.component';
 
 
-
 // mat imports
+import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DailogForUserNumberComponent } from './dailog-for-user-number/dailog-for-user-number.component';
@@ -17,7 +17,15 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { UseratncardComponent } from './useratncard/useratncard.component';
-
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { UsrlayoutComponent } from './usrlayout/usrlayout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BankTransactionsComponent } from './bank-transactions/bank-transactions.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +33,8 @@ import { UseratncardComponent } from './useratncard/useratncard.component';
     TransactionsComponent,
     DailogForUserNumberComponent,
     UseratncardComponent,
+    UsrlayoutComponent,
+    BankTransactionsComponent,
     
   ],
   imports: [
@@ -36,7 +46,15 @@ import { UseratncardComponent } from './useratncard/useratncard.component';
     MatDialogModule,
     MatButtonToggleModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    MatInputModule,
+    MatCardModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,121 @@
+{
+  "transactions": [
+    {
+      "reciverName":"teja",
+      "transactionId":134567,
+      "bankAccount":"dbs",
+      "bankAccountNumber":990899,
+      "ifcCode":"dbsi9898xx",
+      "amount":1000
+    },
+    {
+      "reciverName":"veera teja",
+      "transactionId":9908,
+      "bankAccount":"dbs",
+      "bankAccountNumber":990899,
+      "ifcCode":"dbsi9898xx",
+      "amount":1000
+    },
+    {
+      "reciverName":"aradhyula",
+      "transactionId":1234567,
+      "bankAccount":"dbs",
+      "bankAccountNumber":990899,
+      "ifcCode":"dbsi9898xx",
+      "amount":1000
+    },
+    {
+      "reciverName":"aradhyula",
+      "transactionId":1234567,
+      "bankAccount":"dbs",
+      "bankAccountNumber":990899,
+      "ifcCode":"dbsi9898xx",
+      "amount":1000
+    },
+    {
+      "reciverName":"aradhyula",
+      "transactionId":1234567,
+      "bankAccount":"dbs",
+      "bankAccountNumber":990899,
+      "ifcCode":"dbsi9898xx",
+      "amount":1000
+    },
+    {
+      "reciverName":"aradhyula",
+      "transactionId":1234567,
+      "bankAccount":"dbs",
+      "bankAccountNumber":990899,
+      "ifcCode":"dbsi9898xx",
+      "amount":500
+    },
+    {
+      "reciverName":"aradhyula",
+      "transactionId":1234567,
+      "bankAccount":"dbs",
+      "bankAccountNumber":990899,
+      "ifcCode":"dbsi9898xx",
+      "amount":1000
+    }
+  ],
+  
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "usersList": {
+    "9908":{
+      "name":"veera teja",
+      "id":9908
+    }
+  },
+  "bankTransactions":[
+    {
+      "date":"01/12/2022",
+      "from":"veera", 
+      "fromAccNo":9908,
+      "fromBankName":"dbs",
+      "fromIfc":"dbsid8980xx",
+      "fromAccType":"savings",
+      "transactionId":12345677,
+      "to":"raki bhai",
+      "toAccNo":9515,
+      "toBankName":"sbi",
+      "toIfc":"sbiXXXXX",
+      "toAccType":"salary",
+      "amount":1000
+    },
+    {
+      "date":"01/2/2022",
+      "from":"teja",
+      "fromAccNo":9907,
+      "fromBankName":"dbs",
+      "fromIfc":"dbsid8980xx",
+      "fromAccType":"savings",
+      "transactionId":1234,
+      "to":"raki bhai",
+      "toAccNo":787,
+      "toBankName":"sbi",
+      "toIfc":"sbiXXXXX",
+      "toAccType":"overdraft",
+      "amount":999
+    },
+    {
+      "date":"5/1/2022",
+      "from":"veera",
+      "fromAccNo":8888,
+      "fromBankName":"dbs",
+      "fromIfc":"dbsid8980xx",
+      "fromAccType":"overdraft",
+      "transactionId":12345677,
+      "to":"raki bhai",
+      "toAccNo":999,
+      "toBankName":"sbi",
+      "toIfc":"sbiXXXXX",
+      "toAccType":"savings",
+      "amount":1000
+    }
+  ]
+}

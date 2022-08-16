@@ -1,6 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-body{
-    padding: 50px 100px 0 100px;
+body {
+  padding: 50px 100px 0 100px;
+  /* background-color: var(--bg); */
+}
+
+:root {
+  --primary: rgb(201, 16, 16);
+  --bg: #e9e9e9;
+  --hover: #ccc;
+  --shadow: 6px 6px 9px rgba(0, 0, 0, 0.4), -6px -6px 9px rgb(255, 248, 248);
+  --in_shadow: inset 6px 6px 9px rgba(0, 0, 0, 0.4), inset -6px -6px 9px #fff;
+  --end_shadow: inset -6px -6px 9px #fff;
+}
+* {
+  margin: 0;
+  /* padding: 0; */
+  box-sizing: border-box;
+  font-size: 16px;
+  
+}
+.softui {
+  /* background: var(--bg); */
+  box-shadow: var(--shadow);
+  padding: 20px;
 }

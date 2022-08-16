@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="box1">
+    <div class="softui">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>user account number</mat-label>
+        <input
+          [(ngModel)]="userIn"
+          matInput
+          placeholder=""
+          type="number"
+          required
+          #input
+        />
+        <mat-error> please enter account number </mat-error>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="warn"
+        (click)="getUserTransactions(userIn)"
+      >
+        Get Transactions
+      </button>
+    </div>
+    <!-- table -->
+
+    <!-- <div class="tableContainer"> -->
+      <!-- filter text table   -->
+
+      <mat-form-field ppearance="outline">
+        <mat-label>serch transactions</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="EX" #input />
+      </mat-form-field>
+
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" class="" matSort>
+          <!-- ID Column -->
+          <ng-container matColumnDef="reciverName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>name</th>
+            <td mat-cell *matCellDef="let row">{{ row.reciverName }}</td>
+          </ng-container>
+
+          <!-- Progress Column -->
+          <ng-container matColumnDef="transactionId">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              Transaction Id
+            </th>
+            <td mat-cell *matCellDef="let row">{{ row.transactionId }}</td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="bankAccount">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>bank</th>
+            <td mat-cell *matCellDef="let row">{{ row.bankAccount }}</td>
+          </ng-container>
+
+          <!-- Fruit Column -->
+          <ng-container matColumnDef="bankAccountNumber">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              A/c number
+            </th>
+            <td mat-cell *matCellDef="let row">
+              {{ row.bankAccountNumber }}
+            </td>
+          </ng-container>
+          <!-- ifc -->
+          <ng-container matColumnDef="ifcCode">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>ifc code</th>
+            <td mat-cell *matCellDef="let row">{{ row.ifcCode }}</td>
+          </ng-container>
+          <!-- ammount -->
+          <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>amount</th>
+            <td mat-cell *matCellDef="let row">$ {{ row.amount }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">
+              No data matching the filter "{{ input.value }}"
+            </td>
+          </tr>
+
+          <!-- <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr> -->
+        </table>
+        <!-- <mat-paginator
+          #paginator
+          [pageSize]="10"
+          [pageSizeOptions]="[5, 10, 25, 100]"
+          aria-label="Select page"
+        >
+        </mat-paginator> -->
+      </div>
+    <!-- </div> -->
+    <!-- table end -->
+  </div>
+  <div class="box2">
+    <app-useratncard> </app-useratncard>
+  </div>
+  <div class="box3"></div>
+</div>

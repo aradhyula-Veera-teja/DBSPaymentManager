@@ -1,0 +1,52 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  /* grid-template-rows: 5fr 3fr; */
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  grid-gap: 10px;
+}
+
+.box1 {
+  /* background: red; */
+  grid-column: 1/3;
+  grid-row: 1/3;
+  padding: 50px;
+}
+
+/* .box2 {
+  background: green;
+} */
+
+.box3 {
+  background: yellow;
+}
+
+table {
+  width: 100%;
+}
+
+.example-first-header-row th {
+  border-bottom: none;
+}
+
+.example-second-header-row {
+  font-style: italic;
+}
+
+.example-first-footer-row {
+  font-weight: bold;
+}
+
+.example-second-footer-row td {
+  font-style: italic;
+}
+.example-full-width{
+  width: 60%;
+}
+.example-full-width mat-form-field{
+  height: 10px;
+}
+.tableContainer{
+  padding-top: 10px;
+}

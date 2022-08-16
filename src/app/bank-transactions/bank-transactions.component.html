@@ -1,0 +1,112 @@
+
+<div>
+    <input  [(ngModel)]="userIn" type="date">
+    <p>
+        
+        {{userIn |date}}
+    </p>
+    <mat-form-field appearance="standard">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input />
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 ">
+        <!-- date -->
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>date</th>
+            <td mat-cell *matCellDef="let element">{{ element.date |date }}</td>
+        </ng-container>
+        <!-- transaction id -->
+        <ng-container matColumnDef="transactionId">
+            <th mat-header-cell *matHeaderCellDef>id</th>
+            <td mat-cell *matCellDef="let element">{{ element.transactionId }}</td>
+        </ng-container>
+        <!-- from -->
+        <ng-container matColumnDef="from">
+            <th mat-header-cell *matHeaderCellDef>from</th>
+            <td mat-cell *matCellDef="let element">{{ element.from }}</td>
+        </ng-container>
+
+        <!-- from bank -->
+
+        <ng-container matColumnDef="fromBankName">
+            <th mat-header-cell *matHeaderCellDef>Bank Name</th>
+            <td mat-cell *matCellDef="let element">{{ element.fromBankName }}</td>
+        </ng-container>
+        
+        <!-- from acc -->
+        <ng-container matColumnDef="fromAccNo">
+            <th mat-header-cell *matHeaderCellDef>fromAccNo</th>
+            <td mat-cell *matCellDef="let element">{{ element.fromAccNo }}</td>
+        </ng-container>
+
+        <!-- from ifc -->
+        <ng-container matColumnDef="fromIfc">
+            <th mat-header-cell *matHeaderCellDef>fromIfc</th>
+            <td mat-cell *matCellDef="let element">{{ element.fromIfc }}</td>
+        </ng-container>
+
+        <!-- from acc type -->
+        <ng-container matColumnDef="fromAccType">
+            <th mat-header-cell *matHeaderCellDef>fromAccType</th>
+            <td mat-cell *matCellDef="let element">{{ element.fromAccType }}</td>
+        </ng-container>
+
+        <!-- to -->
+        <ng-container matColumnDef="to">
+            <th mat-header-cell *matHeaderCellDef>to</th>
+            <td mat-cell *matCellDef="let element">{{ element.to }}</td>
+        </ng-container>
+        <!-- to bank name -->
+        <ng-container matColumnDef="toBankName">
+            <th mat-header-cell *matHeaderCellDef>toBankName</th>
+            <td mat-cell *matCellDef="let element">{{ element.toBankName}}</td>
+        </ng-container>
+        <!-- to ban acc no -->
+        <ng-container matColumnDef="toAccNo">
+            <th mat-header-cell *matHeaderCellDef>toAccNo</th>
+            <td mat-cell *matCellDef="let element">{{ element.toAccNo }}</td>
+        </ng-container>
+        <!-- to tfc -->
+        <ng-container matColumnDef="toIfc">
+            <th mat-header-cell *matHeaderCellDef>toIfc</th>
+            <td mat-cell *matCellDef="let element">{{ element.toIfc }}</td>
+        </ng-container>
+        <!-- to acc number -->
+        <ng-container matColumnDef="toAccType">
+            <th mat-header-cell *matHeaderCellDef>toAccType</th>
+            <td mat-cell *matCellDef="let element">{{ element.toAccType }}</td>
+        </ng-container>
+
+        <!-- amount -->
+
+        <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef>amount</th>
+            <td mat-cell *matCellDef="let element">{{ element.amount }}</td>
+        </ng-container>
+        <!-- 'from',
+    'fromBankName',
+    'fromAccNo',
+    'fromIfc',
+    'fromAccType',
+    'to',
+    'toBankName',
+    'toAccNo',
+    'toIfc',
+    'toAccType', -->
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">
+                No data matching the filter "{{ input.value }}"
+            </td>
+        </tr>
+    </table>
+
+    <!-- <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div> -->
+</div>
