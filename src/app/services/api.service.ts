@@ -25,9 +25,9 @@ export class ApiService {
       balance:900000,
       cvv:999
     }
-    return this.http.get<any>("http://localhost:3000/usersList/"+x);
+    return this.http.get<any>("http://localhost:3000/usersList/");
   }
   getTransactions(){
-    return this.http.get<any>("http://localhost:3000/transactions");
+    return this.http.get<any>("http://localhost:3000/transactions/");
   }
 }

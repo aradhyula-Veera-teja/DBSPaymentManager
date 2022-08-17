@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+/* 404 style */
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
 body {
-  padding: 50px 100px 0 100px;
+  padding: 50px
   /* background-color: var(--bg); */
 }
 
@@ -18,8 +20,13 @@ body {
   margin: 0;
   /* padding: 0; */
   box-sizing: border-box;
+}
+h5{
   font-size: 16px;
-  
+}
+h3{
+  font-size: 18px;
+  color: rgb(236, 20, 20);
 }
 .softui {
   /* background: var(--bg); */

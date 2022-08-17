@@ -1,0 +1,10 @@
+mat-icon{
+    
+    color: red;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)  scale(2);;
+}
+mat-dialog-content{
+    padding: 20px;
+}

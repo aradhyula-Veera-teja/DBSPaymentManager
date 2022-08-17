@@ -1,0 +1,75 @@
+.container {
+    display: grid;
+    width: 100%;
+    height: 85vh;
+    grid-template-columns: 1fr 0.7fr 1fr;
+    overflow-y: hidden;
+    /* grid-template-rows: 1fr 1fr; */
+}
+
+.cardsContainer {
+    /* background: green; */
+    grid-column: 1/3;
+    overflow-y: scroll;
+}
+
+.graphsContainer {
+    position: relative;
+    height: 100vh;
+    /* background: red; */
+    grid-column: 3/4;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 0.8fr 1fr;
+    padding-left: 20px;
+}
+.transactionschart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    /* background: red; */
+}
+.transactionschart canvas{
+    bottom: 0;
+}
+.transactionsCard {
+    margin: 20px 0;
+    /* width: minmax(); */
+    width: 800px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.from,
+.id,
+.to {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* position: ; */
+    /* height: 150px; */
+    width: 250px;
+    padding: 10px;
+}
+
+.transactionsCard h5 {
+    padding: 5px 0;
+}
+
+.amount {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* background: yellow; */
+    border: 2px solid rgb(254, 8, 8);
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    justify-content: center;
+}
+

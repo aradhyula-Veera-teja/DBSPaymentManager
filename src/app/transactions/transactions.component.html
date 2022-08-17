@@ -1,1 +1,70 @@
-<p>transactions works!</p>
+<mat-form-field *ngIf="displays" multiple appearance="outline" >
+    <mat-label>Filter by</mat-label>
+    <mat-select  (selectionChange)="c($event)" [(ngModel)]="userIn">
+      <mat-option value="ll" >All</mat-option>
+      <mat-option value="savings " >Savings Account</mat-option>
+      <mat-option value="salary " >Salary account</mat-option>
+      <mat-option value="overdraft " >Overdraft Account</mat-option>
+      <mat-option value="current" >Current</mat-option>
+    </mat-select >
+  </mat-form-field>
+<div class="container">
+    <div class="cardsContainer">
+        <div *ngFor="let i of data" class="transactionsCard softui">
+            <div class="from">
+                <h3>From</h3>
+                <h5>Acc Holder Name : {{ i.from }}</h5>
+                <h5>Acc No : {{ i.fromAccNo }}</h5>
+                <h5>Bank name : {{ i.fromBankName }}</h5>
+                <h5>IFC : {{ i.fromIfc }}</h5>
+                <h5>Acc Type : {{ i.fromAccType }}</h5>
+
+                <!-- from	Bank Name	fromAccNo	fromIfc	fromAccType -->
+                <!-- {
+            "date":"5/1/2022",
+            "from":"veera",
+            "fromAccNo":8888,
+            "fromBankName":"dbs",
+            "fromIfc":"dbsid8980xx",
+            "fromAccType":"overdraft",
+            "transactionId":12345677,
+            "to":"raki bhai",
+            "toAccNo":999,
+            "toBankName":"sbi",
+            "toIfc":"sbiXXXXX",
+            "toAccType":"savings",
+            "amount":1000
+          } -->
+            </div>
+            <div class="id">
+                <h5>Transaction ID : {{ i.transactionId }}</h5>
+                <div class="amount">
+                    <h5>{{ i.amount }}</h5>
+                </div>
+                <h5>Date : {{ i.date | date }}</h5>
+            </div>
+            <div class="to">
+                <h3>To</h3>
+                <h5>Name : {{ i.from }}</h5>
+                <h5>Acc No : {{ i.toAccNo }}</h5>
+                <h5>Bank Name : {{ i.toBankName }}</h5>
+                <h5>IFC : {{ i.toIfc }}</h5>
+                <h5>Acc Type : {{ i.toAccType }}</h5>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="displays" class="graphsContainer">
+        <div class="transactionschart">
+            <canvas baseChart [data]="barChartData" [options]="barChartOptions" [plugins]="barChartPlugins"
+                [legend]="barChartLegend" [type]="'bar'">
+            </canvas>
+        </div>
+        <div class="bankChart">
+            <h3 style="text-align: center;">No of trasactions</h3>
+
+            <canvas baseChart [type]="'pie'" [datasets]="pieChartDatasets" [labels]="pieChartLabels"
+            [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+        </canvas>
+        </div>
+    </div>
+</div>

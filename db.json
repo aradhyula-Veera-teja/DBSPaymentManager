@@ -65,12 +65,9 @@
       "postId": 1
     }
   ],
-  "usersList": {
-    "9908":{
-      "name":"veera teja",
-      "id":9908
-    }
-  },
+  "usersList": [{
+    "name":"ram"
+  }],
   "bankTransactions":[
     {
       "date":"01/12/2022",
@@ -116,6 +113,52 @@
       "toIfc":"sbiXXXXX",
       "toAccType":"savings",
       "amount":1000
+    },
+    {
+      "date":"5/1/2022",
+      "from":"veera",
+      "fromAccNo":8888,
+      "fromBankName":"dbs",
+      "fromIfc":"dbsid8980xx",
+      "fromAccType":"overdraft",
+      "transactionId":12345677,
+      "to":"raki bhai",
+      "toAccNo":999,
+      "toBankName":"sbi",
+      "toIfc":"sbiXXXXX",
+      "toAccType":"savings",
+      "amount":1000
+    },
+    {
+      "date":"5/1/2022",
+      "from":"veera",
+      "fromAccNo":8888,
+      "fromBankName":"dbs",
+      "fromIfc":"dbsid8980xx",
+      "fromAccType":"overdraft",
+      "transactionId":12345677,
+      "to":"raki bhai",
+      "toAccNo":999,
+      "toBankName":"sbi",
+      "toIfc":"sbiXXXXX",
+      "toAccType":"savings",
+      "amount":1000
+    },
+    {
+      "date":"5/1/2022",
+      "from":"veera",
+      "fromAccNo":8888,
+      "fromBankName":"dbs",
+      "fromIfc":"dbsid8980xx",
+      "fromAccType":"overdraft",
+      "transactionId":12345677,
+      "to":"raki bhai",
+      "toAccNo":999,
+      "toBankName":"sbi",
+      "toIfc":"sbiXXXXX",
+      "toAccType":"savings",
+      "amount":1000
     }
-  ]
+  ],
+  "test":[]
 }

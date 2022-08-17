@@ -27,6 +27,11 @@ import { BankTransactionsComponent } from './bank-transactions/bank-transactions
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
+import { NgChartsModule } from 'ng2-charts';
+import { PagenotfondComponent } from './dialogs/pagenotfond/pagenotfond.component';
+import { NotransactionsComponent } from './dialogs/notransactions/notransactions.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +41,8 @@ import {MatSelectModule} from '@angular/material/select';
     UseratncardComponent,
     UsrlayoutComponent,
     BankTransactionsComponent,
+    PagenotfondComponent,
+    NotransactionsComponent,
     
   ],
   imports: [
@@ -56,7 +63,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     MatCardModule,
     MatDatepickerModule,
-    MatSelectModule
+    MatSelectModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -38,8 +38,8 @@ export class BankTransactionsComponent implements OnInit {
       next: (res) => {
         
         this.dataSource = new MatTableDataSource(res);
-        console.log(res);
-        console.log(res.length);
+        // console.log(res);
+        // console.log(res.length);
         this.paginator = this.paginator;
         this.sort = this.sort;
       },
